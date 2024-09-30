@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Repository\**" />
+    <EmbeddedResource Remove="Repository\**" />
+    <None Remove="Repository\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Repository\ApplicationUserRepository.cs" />
+    <Compile Include="Repository\OrderDetailRepository.cs" />
+    <Compile Include="Repository\OrderHeaderRepository.cs" />
+    <Compile Include="Repository\IRepositroy\IOrderDetailRepository.cs" />
+    <Compile Include="Repository\IRepositroy\IOrderHeaderRepository.cs" />
+    <Compile Include="Repository\ShoppingCartRepository.cs" />
+    <Compile Include="Repository\CompanyRepository.cs" />
+    <Compile Include="Repository\IRepositroy\IApplicationUserRepository.cs" />
+    <Compile Include="Repository\IRepositroy\IShoppingCartRepository.cs" />
+    <Compile Include="Repository\IRepositroy\ICompanyRepository.cs" />
+    <Compile Include="Repository\ProductRepository .cs" />
+    <Compile Include="Repository\CoverTypeRepository .cs" />
+    <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\IRepositroy\IProductRepository.cs" />
+    <Compile Include="Repository\IRepositroy\ICoverTypeRepository.cs" />
+    <Compile Include="Repository\IRepositroy\ICategoryRepository.cs" />
+    <Compile Include="Repository\IRepositroy\IRepositroy.cs" />
+    <Compile Include="Repository\IRepositroy\IUnitOfWork.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\UnitOfWork.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="3.6.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+    <PackageReference Include="MimeKit" Version="3.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BulkyBooks.Models\BulkyBooks.Models.csproj" />
+    <ProjectReference Include="..\BulkyBooks.Utility\BulkyBooks.Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BulkyBooksWeb\" />
+    <Folder Include="Data\" />
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>
